@@ -61,7 +61,7 @@ criterion = CE_Loss(num_classes, device)
 adam = optim.Adam([{'params': net.parameters()},], lr=0.01, weight_decay=0.0001, amsgrad=True)
 optimizer = Optimizer(adam, train_loader, device)
 
-epochs=1
+epochs=25
 lr=0.008
 
 sched = torch.optim.lr_scheduler.OneCycleLR(optimizer.optimizer, lr, epochs=epochs,
